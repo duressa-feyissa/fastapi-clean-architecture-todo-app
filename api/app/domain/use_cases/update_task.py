@@ -1,9 +1,10 @@
-from app.domain.repositories.base_repository import BaseRepository
 from app.domain.entities.task import TaskEntity
+from app.domain.repositories.base_repository import BaseRepository
 from core.common.either import Either
 from core.common.equatable import Equatable
 from core.errors.failure import Failure
 from core.use_cases.use_case import UseCase
+
 
 class Params(Equatable):
     def __init__(self, task: TaskEntity) -> None:

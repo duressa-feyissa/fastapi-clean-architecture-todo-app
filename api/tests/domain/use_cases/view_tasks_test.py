@@ -1,12 +1,14 @@
 import datetime
 import unittest
 from unittest.mock import MagicMock
-from app.domain.use_cases.view_tasks import ViewAllTasks
+
+from app.domain.entities.task import Task, TaskEntity
 from app.domain.repositories.base_repository import BaseRepository
-from app.domain.entities.task import TaskEntity, Task
+from app.domain.use_cases.view_tasks import ViewAllTasks
 from core.common.either import Either
-from core.use_cases.use_case import NoParams
 from core.errors.failure import Failure
+from core.use_cases.use_case import NoParams
+
 
 class TestViewTasks(unittest.IsolatedAsyncioTestCase):
     

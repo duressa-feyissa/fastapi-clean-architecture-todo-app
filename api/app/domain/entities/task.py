@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 import datetime
 from typing import Optional, TypedDict
+from pydantic import BaseModel
 from app.domain.entities import BaseEntity
 
 class Task(TypedDict):
@@ -12,7 +13,7 @@ class Task(TypedDict):
 
 @dataclass
 class TaskEntity(BaseEntity):
-    id: str
+    id: Optional[str]
     title: str
     description: str
     date: datetime.datetime

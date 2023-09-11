@@ -5,9 +5,6 @@ from abc import ABC, abstractmethod
 from typing import Iterable
 
 class ContextManagerRepository(ABC):
-    @abstractmethod
-    def commit(self):
-        ...
 
     def __enter__(self):
         return self
